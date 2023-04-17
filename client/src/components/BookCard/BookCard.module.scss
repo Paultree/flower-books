@@ -1,0 +1,21 @@
+.BookCard {
+  text-align: left;
+
+  width: 25%;
+  margin: 1rem;
+  border: 1px solid #f4eee0;
+  border-radius: 0 1rem 1rem 1rem;
+  padding-left: 1rem;
+
+  & > * {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.BookCard:hover {
+  cursor: pointer;
+  box-shadow: 0.5rem -0.5rem white;
+  transition: box-shadow 0.5s;
+}

@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+
+.App {
+  max-width: 70%;
+  margin: 0 auto;
+  background-color: #242424;
+  &_Grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &_Title {
+    font-family: "Cedarville Cursive", cursive;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    & > p {
+      margin: 0;
+    }
+    & > h1 {
+      margin: 0;
+    }
+  }
+  &_Footer {
+    text-align: center;
+  }
+}

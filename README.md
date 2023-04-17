@@ -6,22 +6,25 @@ A basic front-end application which demonstrates fetching and displaying data fr
 
 <!-- ![Alt Text](./project-demo.gif) -->
 
+# Link
+
 # Requirement/Purpose
 
 Purpose of project is to demonstrate data fetching from an API and styling for a search engine webpage that displays books related to flowers.
 
 Develop a basic front-end application with the following features:
 
-- Fetch and display a list of books related to flowers from the following REST API: https://www.googleapis.com/books/v1/volumes?q=flowers
-- Present the fetched data in a table, including book title, authors, and published date.
-- Enable users to view more details of a selected book, such as title, subtitle, authors, image, and description.
-- Encourage the candidates to showcase their creativity and add a personal touch to the application.
-- Include a README file explaining the app's features and the creative elements introduced.
+- Fetch and display a list of books related to flowers from the following REST API: https://www.googleapis.com/books/v1/volumes?q=flowers - [x]
+- Present the fetched data in a table, including book title, authors, and published date. - [x]
+- Enable users to view more details of a selected book, such as title, subtitle, authors, image, and description. - []
+- Encourage the candidates to showcase their creativity and add a personal touch to the application. - []
+- Include a README file explaining the app's features and the creative elements introduced. - [x]
 
 Stack used:
 
 - React + Vite
 - SCSS/SASS
+- Typescript
 
 # Build Steps
 
@@ -33,9 +36,29 @@ Prequisities:
 
 Steps:
 
+- Clone repo
+- Navigate into client/ using CLI
+- npm install
+- npm run dev
+- Open google chrome browser and copy link in command line(local: link) into browser searchbar.
+
 # Design Goals/Approach
 
+- For fetching all flower books, I have decided to use the react-query library. Although for the scope of this project we are fetching a specific API, I thought react-query would be best to use for its efficient fetching and error handling.
+  - Will only use 40 flower-related books as google books API only allows 40 max at a time. To include filter feature, I am only using a specific query.
+- Used Cedarville Cursive font purely for the title/header text. Book information will retain a generic font to improve UX in terms of reading.
+- When user clicks on a cell/card, it will open a modal which will have image, title, author and description in full. To improve UX for phone, description will include a scroll option. Furthermore, modal can be closed either by clicking on an X button or simply clicking outside the modal.
+- Responsive design for phone, tablet and desktop.
+- Favorite button that allows user to favorite a book.
+  - If this is done, will have to add a favorite page so user is able to check what they have favorited.
+  - Also, may have to add in a storage session so favorited books can be stored.
+
 # Features
+
+- Responsive design
+- Can expand/modal book information upon clicking on respective card.
+- Can sort list by author, title or date published.
+- Can favorite books
 
 # Known Issues
 
@@ -48,3 +71,5 @@ Steps:
 # Licencing Details
 
 # Further Details
+
+https://fonts.google.com/specimen/Cedarville+Cursive
