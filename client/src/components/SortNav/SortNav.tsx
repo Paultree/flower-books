@@ -7,7 +7,6 @@ const SortNav = ({ handleSortTitle, handleSortAuthors }: any) => {
       <h3>Sort By:</h3>
       <h3 onClick={handleSortTitle}>Title</h3>
       <h3 onClick={handleSortAuthors}>Author</h3>
-      <h3>Reset</h3>
     </div>
   );
 };

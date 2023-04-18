@@ -69,7 +69,7 @@ Steps:
 # Features
 
 - Responsive design - []
-- Can sort list by author, title or date published. -[]
+- Can sort list by author or title -[x]
 - Can favorite books - []
 - Can sort books by favourited - []
 
