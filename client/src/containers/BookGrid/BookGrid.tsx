@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./BookGrid.module.scss";
 import { ThreeDots } from "react-loader-spinner";
 import { Book } from "../../services/book";

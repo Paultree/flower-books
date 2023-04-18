@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { Book } from "../../services/book";
@@ -41,7 +41,7 @@ const BookInfo = ({ data }: any) => {
       </section>
     </div>
   ) : (
-    <div className={styles.BookInfo}>
+    <div className={styles.BookInfo_Info}>
       <ThreeDots
         height="80"
         width="80"

@@ -68,9 +68,10 @@ Steps:
 
 # Features
 
-- Responsive design
-- Can sort list by author, title or date published.
-- Can favorite books
+- Responsive design - []
+- Can sort list by author, title or date published. -[]
+- Can favorite books - []
+- Can sort books by favourited - []
 
 # Known Issues
 

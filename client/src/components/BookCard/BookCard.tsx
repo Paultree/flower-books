@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./BookCard.module.scss";
 import { useNavigate } from "react-router-dom";
-import { Book } from "../../services/book";
 
 const BookCard = ({ data }: any) => {
   const navigate = useNavigate();

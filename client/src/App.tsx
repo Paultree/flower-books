@@ -1,8 +1,6 @@
 import { useQuery } from "react-query";
 import { getAllBooks } from "./services/service";
 import styles from "./App.module.scss";
-import BookCard from "./components/BookCard/BookCard";
-import { ThreeDots } from "react-loader-spinner";
 import { Book } from "./services/book";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BookGrid from "./containers/BookGrid/BookGrid";
