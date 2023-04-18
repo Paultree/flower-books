@@ -1,18 +1,15 @@
-import { useEffect, useState } from "react";
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider,
-} from "react-query";
+import { useQuery } from "react-query";
 import { getAllBooks } from "./services/service";
 import styles from "./App.module.scss";
 import BookCard from "./components/BookCard/BookCard";
 import { ThreeDots } from "react-loader-spinner";
+import { Book } from "./services/book";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BookGrid from "./containers/BookGrid/BookGrid";
+import BookInfo from "./containers/BookInfo/BookInfo";
 
 function App() {
-  const { data, error, isLoading, isError }: any = useQuery(
+  const { data, error, isLoading, isError } = useQuery<Book[], Error>(
     "books",
     getAllBooks
   );
@@ -21,27 +18,24 @@ function App() {
     <div className={styles.App}>
       <header className={styles.App_Title}>
         <h1>B o o q u e t</h1>
-        <p>A library of flower-related books...</p>
+        <p>A list of flower-related books...</p>
       </header>
       <nav></nav>
-      <section className={styles.App_Grid}>
-        {isLoading ? (
-          <ThreeDots
-            height="80"
-            width="80"
-            radius="9"
-            color="rgba(255, 255, 255, 0.87)"
-            ariaLabel="three-dots-loading"
-            wrapperStyle={{}}
-            visible={true}
+      <section>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <BookGrid
+                data={data}
+                error={error}
+                isLoading={isLoading}
+                isError={isError}
+              />
+            }
           />
-        ) : isError ? (
-          `Error: ${error.message}`
-        ) : (
-          data.map((book: any, id: number) => {
-            return <BookCard data={book} key={id} />;
-          })
-        )}
+          <Route path="/:id" element={<BookInfo data={data} />} />
+        </Routes>
       </section>
       <footer className={styles.App_Footer}>
         Booquet. Built by Paul Pham.

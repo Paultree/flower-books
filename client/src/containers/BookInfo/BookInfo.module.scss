@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.BookInfo {
+  font-family: "Inria Serif", serif;
+  height: 83vh;
+  &_Info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+
+    & > section {
+      flex: 1 1 auto;
+      width: 40%;
+      margin: 0 2.5%;
+    }
+    &_DescHead {
+      text-align: center;
+      margin-bottom: 0;
+      text-decoration: underline;
+    }
+    &_Desc {
+      margin-top: 0.5rem;
+    }
+    &_Title {
+      text-align: center;
+      margin-top: 0;
+    }
+    &_Authors {
+      text-align: center;
+    }
+  }
+  &_Image {
+    flex: 1 1 auto;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+span {
+  padding-left: 2.5%;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

@@ -1,21 +1,7 @@
 import missingImg from "../assets/missing.jpeg";
+import { Book } from "./book";
 
-export const getAllByIndex = async (index: number) => {
-  const response: any = await fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=flowers&maxResults=40&startIndex=${index}`
-  );
-
-  if (!response) {
-    throw new Error(
-      "Something went wrong. Unable to retrieve books. Retry or refresh page."
-    );
-  }
-
-  return await response.json();
-};
-
-//for test//
-export const getAllBooks = async () => {
+export const getAllBooks: () => Promise<Book[]> = async () => {
   const response: any = await fetch(
     `https://www.googleapis.com/books/v1/volumes?q=flowers&maxResults=40`
   );
@@ -28,7 +14,7 @@ export const getAllBooks = async () => {
 
   const result: any = await response.json();
 
-  const books: any[] = result.items.map((book: any) => {
+  const books: Book[] = result.items.map((book: any) => {
     return {
       id: book?.id,
       title: book?.volumeInfo?.title || "Title not available",

@@ -1,14 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .App {
   max-width: 70%;
   margin: 0 auto;
   background-color: #242424;
-  &_Grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
   &_Title {
     font-family: "Cedarville Cursive", cursive;
     text-align: center;
@@ -16,6 +11,7 @@
     padding: 1rem 0;
     & > p {
       margin: 0;
+      font-family: "Inria Serif", serif;
     }
     & > h1 {
       margin: 0;
