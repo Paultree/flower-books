@@ -63,8 +63,8 @@ Steps:
   - Complete title and author text.
 - Responsive design for phone, tablet and desktop.
 - Favorite button that allows user to favorite a book.
-  - If this is done, will have to add a favorite page so user is able to check what they have favorited.
-  - Also, may have to add in a storage session so favorited books can be stored.
+  - At the center or right (on same level as sorting component), I will add a filter option 'all' and 'favourites' which will render favourited books or all books.
+- For sort feature, I plan to use the .sort method to re-order the list by book title, author or date released. I will also have a reset option to bring list back to original order.
 
 # Features
 

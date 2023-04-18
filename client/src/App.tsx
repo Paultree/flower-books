@@ -5,6 +5,7 @@ import { Book } from "./services/book";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BookGrid from "./containers/BookGrid/BookGrid";
 import BookInfo from "./containers/BookInfo/BookInfo";
+import { useState, useEffect } from "react";
 
 function App() {
   const { data, error, isLoading, isError } = useQuery<Book[], Error>(
@@ -12,13 +13,22 @@ function App() {
     getAllBooks
   );
 
+  const [sortBy, setSortBy] = useState<string>("title");
+
+  const handleSortTitle: () => void = () => {
+    setSortBy("title");
+  };
+
+  const handleSortAuthors: () => void = () => {
+    setSortBy("authors");
+  };
+
   return (
     <div className={styles.App}>
       <header className={styles.App_Title}>
         <h1>B o o q u e t</h1>
         <p>A list of flower-related books...</p>
       </header>
-      <nav></nav>
       <section>
         <Routes>
           <Route
@@ -29,6 +39,9 @@ function App() {
                 error={error}
                 isLoading={isLoading}
                 isError={isError}
+                handleSortAuthors={handleSortAuthors}
+                handleSortTitle={handleSortTitle}
+                sortBy={sortBy}
               />
             }
           />

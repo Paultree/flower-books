@@ -1,5 +1,7 @@
 .BookGrid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  &_Books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }

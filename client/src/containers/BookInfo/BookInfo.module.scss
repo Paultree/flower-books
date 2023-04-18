@@ -25,6 +25,9 @@
     }
     &_Authors {
       text-align: center;
+      border-bottom: 0.25rem solid;
+      border-image: linear-gradient(98deg, #f4eee0, #ff000000) 1;
+      padding-bottom: 0.5rem;
     }
   }
   &_Image {

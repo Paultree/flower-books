@@ -32,7 +32,6 @@ const BookInfo = ({ data }: any) => {
           <h3 className={styles.BookInfo_Info_Authors}>
             <em>{book.authors}</em>
           </h3>
-          <h4 className={styles.BookInfo_Info_DescHead}>Description</h4>
           <p className={styles.BookInfo_Info_Desc}>{book.description}</p>
         </section>
         <section className={styles.BookInfo_Image}>
