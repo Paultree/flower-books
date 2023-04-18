@@ -19,6 +19,7 @@ const BookGrid = ({
     <div className={styles.BookGrid}>
       <nav className={styles.BookGrid_Sort}>
         <SortNav
+          sortBy={sortBy}
           handleSortAuthors={handleSortAuthors}
           handleSortTitle={handleSortTitle}
         />

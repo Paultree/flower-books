@@ -1,2 +1,14 @@
 .SortNav {
+  padding-left: 5%;
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  &_Sort:hover {
+    cursor: pointer;
+  }
+}
+
+.Active {
+  border-bottom: 0.25rem solid white;
+  transition: border 0.1s;
 }
