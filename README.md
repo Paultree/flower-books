@@ -17,7 +17,7 @@ Develop a basic front-end application with the following features:
 - Fetch and display a list of books related to flowers from the following REST API: https://www.googleapis.com/books/v1/volumes?q=flowers - [x]
 - Present the fetched data in a table, including book title, authors, and published date. - [x]
 - Enable users to view more details of a selected book, such as title, subtitle, authors, image, and description. - [x]
-- Encourage the candidates to showcase their creativity and add a personal touch to the application. - []
+- Encourage the candidates to showcase their creativity and add a personal touch to the application. - [x]
 - Include a README file explaining the app's features and the creative elements introduced. - [x]
 
 Stack used:
@@ -64,7 +64,9 @@ Steps:
 - Responsive design for phone, tablet and desktop.
 - Favorite button that allows user to favorite a book.
   - At the center or right (on same level as sorting component), I will add a filter option 'all' and 'favourites' which will render favourited books or all books.
-- For sort feature, I plan to use the .sort method to re-order the list by book title, author or date released. I will also have a reset option to bring list back to original order.
+- For sort feature, I plan to use the .sort method to re-order the list by book title or author.
+  - Sort navbar has an underline depending on what list is getting sorted by.
+    - Use of useState hook and joining of classes.
 
 # Features
 
