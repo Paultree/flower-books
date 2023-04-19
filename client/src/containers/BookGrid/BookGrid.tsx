@@ -15,6 +15,7 @@ const BookGrid = ({ data, error, isLoading, isError }: any) => {
   const handleSortAuthors: () => void = () => {
     setSortBy("authors");
   };
+
   return (
     <div className={styles.BookGrid}>
       <nav className={styles.BookGrid_Sort}>
@@ -26,17 +27,19 @@ const BookGrid = ({ data, error, isLoading, isError }: any) => {
       </nav>
       <section className={styles.BookGrid_Books}>
         {isLoading ? (
-          <ThreeDots
-            height="80"
-            width="80"
-            radius="9"
-            color="rgba(255, 255, 255, 0.87)"
-            ariaLabel="three-dots-loading"
-            wrapperStyle={{}}
-            visible={true}
-          />
+          <div data-testid="loader">
+            <ThreeDots
+              height="80"
+              width="80"
+              radius="9"
+              color="rgba(255, 255, 255, 0.87)"
+              ariaLabel="three-dots-loading"
+              wrapperStyle={{}}
+              visible={true}
+            />
+          </div>
         ) : isError ? (
-          `Error: ${error.message}`
+          <div data-testid="error">Error! {error}</div>
         ) : (
           data
             .sort((a: Book, b: Book) => a[sortBy].localeCompare(b[sortBy]))

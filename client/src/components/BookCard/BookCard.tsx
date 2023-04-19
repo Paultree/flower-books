@@ -9,7 +9,7 @@ const BookCard = ({ data }: any) => {
   };
 
   return (
-    <div className={styles.BookCard} onClick={toInfo}>
+    <div data-testid="card" className={styles.BookCard} onClick={toInfo}>
       <h2>{data.title}</h2>
       <h4>{data.authors}</h4>
       <h5>{data.publishedDate}</h5>

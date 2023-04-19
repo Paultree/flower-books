@@ -67,6 +67,7 @@ Steps:
 - For sort feature, I plan to use the .sort method to re-order the list by book title or author.
   - Sort navbar has an underline depending on what list is getting sorted by.
     - Use of useState hook and joining of classes.
+- tests created for components + service.
 
 # Features
 

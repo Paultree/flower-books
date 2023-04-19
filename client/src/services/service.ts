@@ -1,8 +1,9 @@
 import missingImg from "../assets/missing.jpeg";
 import { Book } from "./book";
+import axios from "axios";
 
 export const getAllBooks: () => Promise<Book[]> = async () => {
-  const response: any = await fetch(
+  const response: any = await axios.get(
     `https://www.googleapis.com/books/v1/volumes?q=flowers&maxResults=40`
   );
 
@@ -12,7 +13,7 @@ export const getAllBooks: () => Promise<Book[]> = async () => {
     );
   }
 
-  const result: any = await response.json();
+  const result: any = await response.data;
 
   const books: Book[] = result.items.map((book: any) => {
     return {

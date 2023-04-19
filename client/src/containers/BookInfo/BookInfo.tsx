@@ -22,7 +22,7 @@ const BookInfo = ({ data }: any) => {
   }, [data, id]);
 
   return book ? (
-    <div className={styles.BookInfo}>
+    <div data-testid="info" className={styles.BookInfo}>
       <span onClick={toHome}>&lt; Back</span>
       <section className={styles.BookInfo_Info}>
         <section>
@@ -40,7 +40,7 @@ const BookInfo = ({ data }: any) => {
       </section>
     </div>
   ) : (
-    <div className={styles.BookInfo_Info}>
+    <div data-testid="loader" className={styles.BookInfo_Info}>
       <ThreeDots
         height="80"
         width="80"
