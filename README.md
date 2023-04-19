@@ -4,9 +4,11 @@ A basic front-end application which demonstrates fetching and displaying data fr
 
 # Demo & Snippets
 
-<!-- ![Alt Text](./project-demo.gif) -->
+[Alt Text](./project-demo.gif)
 
 # Link
+
+https://paultree.github.io/flower-books
 
 # Requirement/Purpose
 
