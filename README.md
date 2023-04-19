@@ -73,12 +73,13 @@ Steps:
 
 - Responsive design - []
 - Can sort list by author or title -[x]
-- Can favorite books - []
-- Can sort books by favourited - []
 
 # Known Issues
 
 # Future Goals
+
+- Feature that allows user to favorite books
+- Feature that allows user to filter book list by favourites
 
 # Change Logs
 

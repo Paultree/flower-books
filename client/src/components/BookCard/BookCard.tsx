@@ -1,11 +1,11 @@
-import styles from "./BookCard.module.scss";
-import { useNavigate } from "react-router-dom";
+import styles from './BookCard.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 const BookCard = ({ data }: any) => {
   const navigate = useNavigate();
 
   const toInfo: () => void = () => {
-    navigate(`/${data.id}`);
+    navigate(`${data.id}`);
   };
 
   return (

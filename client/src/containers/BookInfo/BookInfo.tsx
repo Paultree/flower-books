@@ -1,15 +1,15 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import { Book } from "../../services/book";
-import styles from "./BookInfo.module.scss";
-import { ThreeDots } from "react-loader-spinner";
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { Book } from '../../services/book';
+import styles from './BookInfo.module.scss';
+import { ThreeDots } from 'react-loader-spinner';
 
 const BookInfo = ({ data }: any) => {
   const navigate = useNavigate();
 
   const toHome: () => void = () => {
-    navigate("/");
+    navigate('/flower-books');
   };
 
   const { id } = useParams();
@@ -26,9 +26,7 @@ const BookInfo = ({ data }: any) => {
       <span onClick={toHome}>&lt; Back</span>
       <section className={styles.BookInfo_Info}>
         <section>
-          <h1 className={styles.BookInfo_Info_Title}>
-            {book.title?.toUpperCase()}
-          </h1>
+          <h1 className={styles.BookInfo_Info_Title}>{book.title?.toUpperCase()}</h1>
           <h3 className={styles.BookInfo_Info_Authors}>
             <em>{book.authors}</em>
           </h3>
