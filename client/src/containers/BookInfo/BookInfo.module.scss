@@ -9,6 +9,7 @@
       flex: 1 1 auto;
       width: 40%;
       margin: 0 2.5%;
+      height: 75vh;
     }
     &_DescHead {
       text-align: center;
@@ -18,6 +19,10 @@
     &_Desc {
       margin-top: 0.5rem;
       text-align: center;
+      width: 100%;
+      height: 60vh;
+      overflow-y: auto;
+      padding: 0 2.5%;
     }
     &_Title {
       text-align: center;
@@ -37,6 +42,7 @@
 
 img {
   width: 100%;
+  height: 75vh;
 }
 
 span {

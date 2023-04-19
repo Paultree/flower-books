@@ -2,8 +2,6 @@ import styles from "./BookGrid.module.scss";
 import { ThreeDots } from "react-loader-spinner";
 import { Book } from "../../services/book";
 import BookCard from "../../components/BookCard/BookCard";
-import { useEffect } from "react";
-import { useState } from "react";
 import SortNav from "../../components/SortNav/SortNav";
 
 const BookGrid = ({

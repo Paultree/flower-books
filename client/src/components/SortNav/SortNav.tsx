@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./SortNav.module.scss";
 
 const SortNav = ({ handleSortTitle, handleSortAuthors, sortBy }: any) => {
