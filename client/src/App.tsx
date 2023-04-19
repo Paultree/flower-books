@@ -5,23 +5,12 @@ import { Book } from "./services/book";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BookGrid from "./containers/BookGrid/BookGrid";
 import BookInfo from "./containers/BookInfo/BookInfo";
-import { useState, useEffect } from "react";
 
 function App() {
   const { data, error, isLoading, isError } = useQuery<Book[], Error>(
     "books",
     getAllBooks
   );
-
-  const [sortBy, setSortBy] = useState<string>("title");
-
-  const handleSortTitle: () => void = () => {
-    setSortBy("title");
-  };
-
-  const handleSortAuthors: () => void = () => {
-    setSortBy("authors");
-  };
 
   return (
     <div className={styles.App}>
@@ -39,9 +28,6 @@ function App() {
                 error={error}
                 isLoading={isLoading}
                 isError={isError}
-                handleSortAuthors={handleSortAuthors}
-                handleSortTitle={handleSortTitle}
-                sortBy={sortBy}
               />
             }
           />

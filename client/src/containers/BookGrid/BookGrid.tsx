@@ -3,16 +3,18 @@ import { ThreeDots } from "react-loader-spinner";
 import { Book } from "../../services/book";
 import BookCard from "../../components/BookCard/BookCard";
 import SortNav from "../../components/SortNav/SortNav";
+import { useState } from "react";
 
-const BookGrid = ({
-  data,
-  error,
-  isLoading,
-  isError,
-  handleSortTitle,
-  handleSortAuthors,
-  sortBy,
-}: any) => {
+const BookGrid = ({ data, error, isLoading, isError }: any) => {
+  const [sortBy, setSortBy] = useState<string>("title");
+
+  const handleSortTitle: () => void = () => {
+    setSortBy("title");
+  };
+
+  const handleSortAuthors: () => void = () => {
+    setSortBy("authors");
+  };
   return (
     <div className={styles.BookGrid}>
       <nav className={styles.BookGrid_Sort}>

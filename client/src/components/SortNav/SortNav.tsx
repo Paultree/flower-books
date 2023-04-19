@@ -1,7 +1,7 @@
 import styles from "./SortNav.module.scss";
 
 const SortNav = ({ handleSortTitle, handleSortAuthors, sortBy }: any) => {
-  const activeClass = [styles.SortNav_Sort, styles.Active];
+  const activeClass: string[] = [styles.SortNav_Sort, styles.Active];
 
   return (
     <div className={styles.SortNav}>
