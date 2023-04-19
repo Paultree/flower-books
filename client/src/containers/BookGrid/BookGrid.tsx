@@ -42,7 +42,7 @@ const BookGrid = ({ data, error, isLoading, isError }: any) => {
           <div data-testid="error">Error! {error}</div>
         ) : (
           data
-            .sort((a: Book, b: Book) => a[sortBy].localeCompare(b[sortBy]))
+            .sort((a: any, b: any) => a[sortBy].localeCompare(b[sortBy]))
             .map((book: Book, id: number) => {
               return <BookCard data={book} key={id} />;
             })
