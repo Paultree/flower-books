@@ -30,10 +30,10 @@ Libraries:
 
 - SASS
 - react-query
-- react-redux
+- ~react-redux~
 - react-loader-spinner
 - rtl
-- react-overlays
+- ~react-overlays~
 - react-router-dom
 
 # Build Steps
