@@ -4,7 +4,11 @@ A basic front-end application which demonstrates fetching and displaying data fr
 
 # Demo & Snippets
 
+v1
 ![Alt Text](./project-demo.gif)
+
+v2
+![Alt Text](./project-demo-update.gif)
 
 # Link
 
@@ -63,7 +67,7 @@ Steps:
   - Image of book
   - description
   - Complete title and author text.
-- Responsive design for phone, tablet and desktop.
+- Responsive design for phone(320px), tablet(768px), desktop(992px) and large desktop(1440px).
 - ~Favorite button that allows user to favorite a book.
   - At the center or right (on same level as sorting component), I will add a filter option 'all' and 'favourites' which will render favourited books or all books.~
 - For sort feature, I plan to use the .sort method to re-order the list by book title or author.
