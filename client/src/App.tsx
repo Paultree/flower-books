@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
 import { getAllBooks } from './services/service';
 import styles from './App.module.scss';
-import { Book } from './services/book';
+import { Book } from './services/type';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BookGrid from './containers/BookGrid/BookGrid';
 import BookInfo from './containers/BookInfo/BookInfo';
@@ -19,9 +19,16 @@ function App() {
         <Routes>
           <Route
             path="/flower-books"
-            element={<BookGrid data={data} error={error} isLoading={isLoading} isError={isError} />}
+            element={
+              <BookGrid
+                data={data as Book[]}
+                error={error}
+                isLoading={isLoading}
+                isError={isError}
+              />
+            }
           />
-          <Route path="flower-books/:id" element={<BookInfo data={data} />} />
+          <Route path="flower-books/:id" element={<BookInfo />} />
         </Routes>
       </section>
       <footer className={styles.App_Footer}>Booquet. Built by Paul Pham.</footer>

@@ -1,24 +1,24 @@
-import React from "react";
-import { render, fireEvent, screen } from "@testing-library/react";
-import BookCard from "../BookCard/BookCard";
-import { describe, it, expect, vi } from "vitest";
-import { MemoryRouter } from "react-router-dom";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { Book } from "../../services/book";
-import userEvent from "@testing-library/user-event";
+import React from 'react';
+import { render, fireEvent, screen } from '@testing-library/react';
+import BookCard from '../BookCard/BookCard';
+import { describe, it, expect, vi } from 'vitest';
+import { MemoryRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { Book } from '../../services/type';
+import userEvent from '@testing-library/user-event';
 
 const mock: Book = {
-  id: "123456",
-  title: "random book",
-  authors: "test and random",
-  description: "a test description 123",
-  image: "someurl",
-  publishedDate: "2021-12-06",
+  id: '123456',
+  title: 'random book',
+  authors: 'test and random',
+  description: 'a test description 123',
+  image: 'someurl',
+  publishedDate: '2021-12-06'
 };
 
-describe("BookCard", () => {
+describe('BookCard', () => {
   const queryClient = new QueryClient();
-  it("should display the correct title, author and published date", () => {
+  it('should display the correct title, author and published date', () => {
     render(
       <QueryClientProvider client={queryClient}>
         <BookCard data={mock} />
@@ -32,7 +32,7 @@ describe("BookCard", () => {
     expect(authors).toBeVisible();
     expect(date).toBeVisible();
   });
-  it("should trigger an event when clicked", async () => {
+  it('should trigger an event when clicked', async () => {
     render(
       <QueryClientProvider client={queryClient}>
         <BookCard data={mock} />
@@ -40,7 +40,7 @@ describe("BookCard", () => {
       { wrapper: MemoryRouter }
     );
     const user = userEvent.setup();
-    const card = screen.getByTestId("card");
+    const card = screen.getByTestId('card');
 
     await user.click(card);
     expect(screen.queryByText(/random book/i)).toBeInTheDocument();

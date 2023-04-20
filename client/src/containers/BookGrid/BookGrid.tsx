@@ -1,20 +1,23 @@
-import styles from "./BookGrid.module.scss";
-import { ThreeDots } from "react-loader-spinner";
-import { Book } from "../../services/book";
-import BookCard from "../../components/BookCard/BookCard";
-import SortNav from "../../components/SortNav/SortNav";
-import { useState } from "react";
+import styles from './BookGrid.module.scss';
+import { ThreeDots } from 'react-loader-spinner';
+import { Book } from '../../services/type';
+import BookCard from '../../components/BookCard/BookCard';
+import SortNav from '../../components/SortNav/SortNav';
+import { useState } from 'react';
+import { BookGridProp } from '../../services/interface';
 
-const BookGrid = ({ data, error, isLoading, isError }: any) => {
-  const [sortBy, setSortBy] = useState<string>("title");
+const BookGrid = ({ data, error, isLoading, isError }: BookGridProp) => {
+  const [sortBy, setSortBy] = useState<string>('title');
 
   const handleSortTitle: () => void = () => {
-    setSortBy("title");
+    setSortBy('title');
   };
 
   const handleSortAuthors: () => void = () => {
-    setSortBy("authors");
+    setSortBy('authors');
   };
+
+  const sortedData: Book[] = data?.sort((a: any, b: any) => a[sortBy].localeCompare(b[sortBy]));
 
   return (
     <div className={styles.BookGrid}>
@@ -25,6 +28,11 @@ const BookGrid = ({ data, error, isLoading, isError }: any) => {
           handleSortTitle={handleSortTitle}
         />
       </nav>
+      <section className={styles.BookGrid_Header}>
+        <h2>TITLE</h2>
+        <h2>AUTHORS</h2>
+        <h2>PUBLISHED</h2>
+      </section>
       <section className={styles.BookGrid_Books}>
         {isLoading ? (
           <div data-testid="loader">
@@ -39,13 +47,11 @@ const BookGrid = ({ data, error, isLoading, isError }: any) => {
             />
           </div>
         ) : isError ? (
-          <div data-testid="error">Error! {error}</div>
+          <div data-testid="error">Error! {error?.message}</div>
         ) : (
-          data
-            .sort((a: any, b: any) => a[sortBy].localeCompare(b[sortBy]))
-            .map((book: Book, id: number) => {
-              return <BookCard data={book} key={id} />;
-            })
+          sortedData.map((book: Book) => {
+            return <BookCard data={book} key={book.id} />;
+          })
         )}
       </section>
     </div>

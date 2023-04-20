@@ -1,7 +1,8 @@
 import styles from './BookCard.module.scss';
 import { useNavigate } from 'react-router-dom';
+import { BookCardProp } from '../../services/interface';
 
-const BookCard = ({ data }: any) => {
+const BookCard = ({ data }: BookCardProp) => {
   const navigate = useNavigate();
 
   const toInfo: () => void = () => {
@@ -11,8 +12,8 @@ const BookCard = ({ data }: any) => {
   return (
     <div data-testid="card" className={styles.BookCard} onClick={toInfo}>
       <h2>{data.title}</h2>
-      <h4>{data.authors}</h4>
-      <h5>{data.publishedDate}</h5>
+      <h2>{data.authors}</h2>
+      <h2>{data.publishedDate}</h2>
     </div>
   );
 };

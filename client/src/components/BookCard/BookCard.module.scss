@@ -1,16 +1,17 @@
 .BookCard {
   text-align: left;
-
-  width: 25%;
-  margin: 1rem;
+  width: 97.5%;
+  margin: 0 1rem;
   border: 1px solid #f4eee0;
-  border-radius: 1rem 0rem 1rem 1rem;
-  padding-left: 1rem;
+
+  display: flex;
 
   & > * {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    flex: 1 1 0;
+    padding-left: 1rem;
   }
 }
 

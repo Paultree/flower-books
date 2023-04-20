@@ -1,7 +1,12 @@
 .BookGrid {
-  &_Books {
+  &_Header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    width: 97.5%;
+    margin: 0 1rem;
+
+    & > * {
+      flex: 1 1 0;
+      padding-left: 1rem;
+    }
   }
 }

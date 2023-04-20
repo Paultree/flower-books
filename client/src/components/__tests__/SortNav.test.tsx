@@ -1,15 +1,15 @@
-import React from "react";
-import { render, fireEvent, screen } from "@testing-library/react";
-import { describe, it, expect, vi } from "vitest";
-import { MemoryRouter } from "react-router-dom";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { Book } from "../../services/book";
-import SortNav from "../SortNav/SortNav";
-import userEvent from "@testing-library/user-event";
+import React from 'react';
+import { render, fireEvent, screen } from '@testing-library/react';
+import { describe, it, expect, vi } from 'vitest';
+import { MemoryRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { Book } from '../../services/type';
+import SortNav from '../SortNav/SortNav';
+import userEvent from '@testing-library/user-event';
 
-describe("SortNav", () => {
+describe('SortNav', () => {
   const queryClient = new QueryClient();
-  it("should render the sort bar", () => {
+  it('should render the sort bar', () => {
     render(
       <QueryClientProvider client={queryClient}>
         <SortNav />
@@ -23,7 +23,7 @@ describe("SortNav", () => {
     expect(title).toBeVisible();
     expect(author).toBeVisible();
   });
-  it("should trigger an event when clicked", async () => {
+  it('should trigger an event when clicked', async () => {
     const mockFn = vi.fn();
 
     render(

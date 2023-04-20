@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { Book } from '../../services/book';
 import styles from './BookInfo.module.scss';
 import { ThreeDots } from 'react-loader-spinner';
+import { getBook } from '../../services/service';
 
-const BookInfo = ({ data }: any) => {
+const BookInfo = () => {
   const navigate = useNavigate();
 
   const toHome: () => void = () => {
@@ -17,9 +17,12 @@ const BookInfo = ({ data }: any) => {
   const [book, setBook]: any = useState({});
 
   useEffect(() => {
-    const bookInfo = data?.find((book: Book) => book.id == id);
-    setBook(bookInfo);
-  }, [data, id]);
+    const wrapper = async () => {
+      const book = await getBook(id as string);
+      setBook(book);
+    };
+    wrapper();
+  }, []);
 
   return book ? (
     <div data-testid="info" className={styles.BookInfo}>

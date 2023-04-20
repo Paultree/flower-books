@@ -75,8 +75,11 @@ Steps:
 
 - Responsive design - []
 - Can sort list by author or title -[x]
+- User can click on button that redirects them to store page - []
 
 # Known Issues
+
+- Low resolution of book image due to api only providing thumbnail images hence when enlarged image looks blurry.
 
 # Future Goals
 
@@ -86,6 +89,8 @@ Steps:
 # Change Logs
 
 # What did you struggle with?
+
+- finding a solution for sorting the data from react-query
 
 # Licencing Details
 
