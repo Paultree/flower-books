@@ -13,7 +13,9 @@ const mock: Book = {
   authors: 'test and random',
   description: 'a test description 123',
   image: 'someurl',
-  publishedDate: '2021-12-06'
+  publishedDate: '2021-12-06',
+  storeLink: 'url',
+  previewLink: 'randomurl'
 };
 
 describe('BookCard', () => {
