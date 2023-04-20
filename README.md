@@ -68,8 +68,8 @@ Steps:
   - description
   - Complete title and author text.
 - Responsive design for phone(320px), tablet(768px), desktop(992px) and large desktop(1440px).
-  ~- Favorite button that allows user to favorite a book.~
-  ~- At the center or right (on same level as sorting component), I will add a filter option 'all' and 'favourites' which will render favourited books or all books.~
+- ~Favorite button that allows user to favorite a book.~
+  - ~At the center or right (on same level as sorting component), I will add a filter option 'all' and 'favourites' which will render favourited books or all books.~
 - For sort feature, I plan to use the .sort method to re-order the list by book title or author.
   - Sort navbar has an underline depending on what list is getting sorted by.
     - Use of useState hook and joining of classes.
