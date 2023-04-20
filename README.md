@@ -74,7 +74,7 @@ Steps:
 
 # Features
 
-- Responsive design - []
+- Responsive design - [x]
 - Can sort list by author or title -[x]
 - User can click on button that redirects them to store page or preview page - [x]
 
@@ -96,5 +96,3 @@ Steps:
 # Licencing Details
 
 # Further Details
-
-https://fonts.google.com/specimen/Cedarville+Cursive

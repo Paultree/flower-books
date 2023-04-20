@@ -13,7 +13,9 @@ const mock: Book[] = [
     authors: 'test and random',
     description: 'a test description 123',
     image: 'someurl',
-    publishedDate: '2021-12-06'
+    publishedDate: '2021-12-06',
+    previewLink: 'randomUrl',
+    storeLink: 'fakeUrl'
   },
   {
     id: '123457',
@@ -21,7 +23,9 @@ const mock: Book[] = [
     authors: 'test',
     description: 'a test description 456',
     image: 'somelink',
-    publishedDate: '2020-02-10'
+    publishedDate: '2020-02-10',
+    previewLink: 'rUrl',
+    storeLink: 'fUrl'
   }
 ];
 
@@ -30,7 +34,7 @@ describe('BookGrid', () => {
   it('should display the loading view', () => {
     render(
       <QueryClientProvider client={queryClient}>
-        <BookGrid data={mock} isLoading={true} />
+        <BookGrid data={mock} isError={false} error={null} isLoading={true} />
       </QueryClientProvider>,
       { wrapper: MemoryRouter }
     );
@@ -40,7 +44,7 @@ describe('BookGrid', () => {
   it('should display the error message', () => {
     render(
       <QueryClientProvider client={queryClient}>
-        <BookGrid data={mock} isLoading={false} isError={true} />
+        <BookGrid data={mock} isLoading={false} isError={true} error={null} />
       </QueryClientProvider>,
       { wrapper: MemoryRouter }
     );
@@ -50,7 +54,7 @@ describe('BookGrid', () => {
   it('should render the list of books', () => {
     render(
       <QueryClientProvider client={queryClient}>
-        <BookGrid data={mock} isLoading={false} isError={false} />
+        <BookGrid data={mock} error={null} isLoading={false} isError={false} />
       </QueryClientProvider>,
       { wrapper: MemoryRouter }
     );

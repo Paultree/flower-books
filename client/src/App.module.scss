@@ -1,13 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
 
 .App {
-  max-width: 70%;
+  @media only screen and (min-width: 320px) {
+    max-width: 90%;
+  }
+  @media only screen and (min-width: 768px) {
+    max-width: 85%;
+  }
+  @media only screen and (min-width: 992px) {
+    max-width: 80%;
+  }
+  @media only screen and (min-width: 1440px) {
+    max-width: 70%;
+  }
+
   margin: 0 auto;
-  background-color: #242424;
+  background-color: #f6f1f1f3;
   &_Title {
     font-family: 'Noto serif jp', serif;
     text-align: center;
-    font-size: 1.5rem;
+    @media only screen and (min-width: 320px) {
+      font-size: 1.25rem;
+    }
+    @media only screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
+
     padding: 1rem 0;
     & > p {
       margin: 0;

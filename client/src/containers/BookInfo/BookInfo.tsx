@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 import styles from './BookInfo.module.scss';
 import { ThreeDots } from 'react-loader-spinner';
 import { getBook } from '../../services/service';
-import LinkButtons from '../../components/LinkButtons/LinkButtons';
 
 const BookInfo = () => {
   const navigate = useNavigate();
@@ -26,7 +25,7 @@ const BookInfo = () => {
   }, []);
 
   return book ? (
-    <div data-testid="info" className={styles.BookInfo}>
+    <div className={styles.BookInfo}>
       <span onClick={toHome}>&lt; Back</span>
       <section className={styles.BookInfo_Info}>
         <section>
@@ -35,7 +34,18 @@ const BookInfo = () => {
             <em>{book.authors}</em>
           </h3>
           <p className={styles.BookInfo_Info_Desc}>{book.description}</p>
-          <LinkButtons previewLink={book.previewLink} buyLink={book.storeLink} />
+          <div className={styles.BookInfo_Info_Buttons}>
+            <button disabled={!book.previewLink}>
+              <a href={book.previewLink} target="_blank">
+                {book.previewLink ? 'Preview' : 'Unavailable'}
+              </a>
+            </button>
+            <button disabled={!book.storeLink}>
+              <a href={book.storeLink} target="_blank">
+                {book.storeLink ? 'Buy' : 'Unavailable'}
+              </a>
+            </button>
+          </div>
         </section>
         <section className={styles.BookInfo_Image}>
           <img src={book.image} />

@@ -2,9 +2,22 @@
   text-align: left;
   display: flex;
   margin: 0 1rem;
-  border: 1px solid #f4eee0;
+  border-bottom: 2px solid #000000;
 
   & > * {
+    @media only screen and (min-width: 320px) {
+      font-size: 0.75rem;
+    }
+    @media only screen and (min-width: 768px) {
+      font-size: 1rem;
+    }
+    @media only screen and (min-width: 992px) {
+      font-size: 1.5rem;
+    }
+    @media only screen and (min-width: 1440px) {
+      font-size: 2rem;
+    }
+
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -18,7 +31,7 @@
 
 .BookCard:hover {
   cursor: pointer;
-  box-shadow: 0.1rem 0.1rem 0 0 white;
-  transition: box-shadow 0.5s;
+  background-color: #aec6cfb3;
+  transition: background-color 0.5s;
 }
 //fix this later
