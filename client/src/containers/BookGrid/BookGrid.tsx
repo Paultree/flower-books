@@ -28,14 +28,14 @@ const BookGrid = ({ data, error, isLoading, isError }: BookGridProp) => {
           handleSortTitle={handleSortTitle}
         />
       </nav>
-      <section className={styles.BookGrid_Header}>
-        <h2>TITLE</h2>
-        <h2>AUTHORS</h2>
-        <h2>PUBLISHED</h2>
-      </section>
-      <section className={styles.BookGrid_Books}>
+      <table className={styles.BookGrid_Table}>
+        <tr className={styles.BookGrid_Table_Header}>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Date Published</th>
+        </tr>
         {isLoading ? (
-          <div data-testid="loader">
+          <div data-testid="loader" className={styles.BookGrid_Loader}>
             <ThreeDots
               height="80"
               width="80"
@@ -53,7 +53,7 @@ const BookGrid = ({ data, error, isLoading, isError }: BookGridProp) => {
             return <BookCard data={book} key={book.id} />;
           })
         )}
-      </section>
+      </table>
     </div>
   );
 };

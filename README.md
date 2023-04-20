@@ -70,12 +70,13 @@ Steps:
   - Sort navbar has an underline depending on what list is getting sorted by.
     - Use of useState hook and joining of classes.
 - tests created for components + service.
+- For link buttons, user can click on preview or buy to redirect them to their respective pages. If preview link or buy links are unavailable on the API, it will be reflected on the button as it will be disabled.
 
 # Features
 
 - Responsive design - []
 - Can sort list by author or title -[x]
-- User can click on button that redirects them to store page - []
+- User can click on button that redirects them to store page or preview page - [x]
 
 # Known Issues
 

@@ -5,4 +5,6 @@ export type Book = {
   description: string;
   image: string;
   publishedDate: string;
+  storeLink: string | null;
+  previewLink: string | null;
 };

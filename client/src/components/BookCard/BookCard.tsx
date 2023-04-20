@@ -10,11 +10,11 @@ const BookCard = ({ data }: BookCardProp) => {
   };
 
   return (
-    <div data-testid="card" className={styles.BookCard} onClick={toInfo}>
-      <h2>{data.title}</h2>
-      <h2>{data.authors}</h2>
-      <h2>{data.publishedDate}</h2>
-    </div>
+    <tr data-testid="card" className={styles.BookCard} onClick={toInfo}>
+      <td>{data.title}</td>
+      <td>{data.authors}</td>
+      <td>{data.publishedDate}</td>
+    </tr>
   );
 };
 

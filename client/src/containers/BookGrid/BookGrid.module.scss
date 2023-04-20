@@ -1,4 +1,19 @@
 .BookGrid {
+  &_Table {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    &_Header {
+      display: flex;
+      & > th {
+        flex: 1 1 0;
+      }
+    }
+  }
+  &_Loader {
+    display: flex;
+    justify-content: center;
+  }
   &_Header {
     display: flex;
     width: 97.5%;

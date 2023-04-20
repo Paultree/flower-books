@@ -13,7 +13,7 @@ function App() {
     <div className={styles.App}>
       <header className={styles.App_Title}>
         <h1>B o o q u e t</h1>
-        <p>A list of flower-related books...</p>
+        <p>A list of flower-related books.</p>
       </header>
       <section>
         <Routes>

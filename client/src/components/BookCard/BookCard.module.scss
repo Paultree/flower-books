@@ -1,10 +1,8 @@
 .BookCard {
   text-align: left;
-  width: 97.5%;
+  display: flex;
   margin: 0 1rem;
   border: 1px solid #f4eee0;
-
-  display: flex;
 
   & > * {
     overflow: hidden;
@@ -13,10 +11,14 @@
     flex: 1 1 0;
     padding-left: 1rem;
   }
+  & > td:nth-child(3) {
+    text-align: center;
+  }
 }
 
 .BookCard:hover {
   cursor: pointer;
-  box-shadow: 0.5rem -0.5rem white;
+  box-shadow: 0.1rem 0.1rem 0 0 white;
   transition: box-shadow 0.5s;
 }
+//fix this later

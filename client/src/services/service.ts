@@ -20,7 +20,9 @@ export const getAllBooks = async (): Promise<Book[]> => {
       authors: book?.volumeInfo?.authors?.join(' & ') || 'Authors not available',
       description: book?.volumeInfo?.description || 'Description not available',
       image: book?.volumeInfo?.imageLinks?.thumbnail || missingImg,
-      publishedDate: book?.volumeInfo?.publishedDate || 'Information missing'
+      publishedDate: book?.volumeInfo?.publishedDate || 'Information missing',
+      storeLink: book?.saleInfo?.buyLink || null,
+      previewLink: book?.saleInfo?.isEbook ? book?.volumeInfo?.previewLink : null
     };
   });
 
@@ -43,7 +45,9 @@ export const getBook = async (id: string): Promise<Book> => {
       authors: book?.volumeInfo?.authors?.join(' & ') || 'Authors not available',
       description: book?.volumeInfo?.description || 'Description not available',
       image: book?.volumeInfo?.imageLinks?.thumbnail || missingImg,
-      publishedDate: book?.volumeInfo?.publishedDate || 'Information missing'
+      publishedDate: book?.volumeInfo?.publishedDate || 'Information missing',
+      storeLink: book?.saleInfo?.buyLink || null,
+      previewLink: book?.saleInfo?.isEbook ? book?.volumeInfo?.previewLink : null
     };
   });
 
