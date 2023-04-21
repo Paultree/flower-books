@@ -4,11 +4,11 @@ A basic front-end application which demonstrates fetching and displaying data fr
 
 # Demo & Snippets
 
-First draft  
-![Alt Text](./project-demos/project-demo.gif)
-
 Updated version  
 ![Alt Text](./project-demos/project-demo-update.gif)
+
+First draft  
+![Alt Text](./project-demos/project-demo.gif)
 
 # Link
 
