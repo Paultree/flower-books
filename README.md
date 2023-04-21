@@ -66,7 +66,7 @@ for testing:
 
 - For fetching all flower books, I have decided to use the react-query library. Although for the scope of this project we are fetching a specific API, I thought react-query would be best to use for its efficient fetching and error handling.
   - Will only use 40 flower-related books as google books API only allows 40 max at a time. To include filter feature, I am only using a specific query.
-- Used Cedarville Cursive font purely for the title/header text. Book information will retain a generic font to improve UX in terms of reading.
+- ~Used Cedarville Cursive font purely for the title/header text. Book information will retain a generic font to improve UX in terms of reading.~
 - When user clicks on a cell/card, redirect user to new page which shows more information on book.
   - Image of book
   - description
@@ -81,7 +81,13 @@ for testing:
   - Mainly testing if component rendered information correctly.
   - For bookInfo, had to import react-router-dom and import into test in order for it to be testable as it does not take in any props but only useParams.
 - For link buttons, user can click on preview or buy to redirect them to their respective pages. If preview link or buy links are unavailable on the API, it will be reflected on the button as it will be disabled.
-- description from api uses html text. To overcome this, included a replace method in the service layer to filter out the html elements and return native text.
+- Description from api uses html text. To overcome this, included a replace method in the service layer to filter out the html elements and return native text.
+- Homepage includes a table with list of book details: title, author, date published.
+- BookInfo page includes book title, author, book image, description and preview/store links.
+  - Also includes a back button to allow user to navigate back to homepage.
+- Used serif font for the title as I thought it'd be appropriate to use for the task.
+- For the list and book details, I picked a font with the user in mind - 'Can the user read this?'.
+- For styling, I opted in for a pastel flower background to accompany the list with black text and white background.
 
 # Features
 
