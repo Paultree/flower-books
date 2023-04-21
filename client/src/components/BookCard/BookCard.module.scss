@@ -1,0 +1,37 @@
+.BookCard {
+  text-align: left;
+  display: flex;
+  margin: 0 1rem;
+  border-bottom: 2px solid #000000;
+
+  & > * {
+    @media only screen and (min-width: 320px) {
+      font-size: 0.75rem;
+    }
+    @media only screen and (min-width: 768px) {
+      font-size: 1rem;
+    }
+    @media only screen and (min-width: 992px) {
+      font-size: 1.5rem;
+    }
+    @media only screen and (min-width: 1440px) {
+      font-size: 2rem;
+    }
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1 1 0;
+    padding-left: 1rem;
+  }
+  & > td:nth-child(3) {
+    text-align: center;
+  }
+}
+
+.BookCard:hover {
+  cursor: pointer;
+  background-color: #aec6cfb3;
+  transition: background-color 0.5s;
+}
+//fix this later

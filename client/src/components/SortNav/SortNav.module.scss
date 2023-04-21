@@ -1,0 +1,26 @@
+.SortNav {
+  padding-left: 2.5%;
+  display: flex;
+  @media only screen and (min-width: 320px) {
+    width: 80%;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 40%;
+  }
+  @media only screen and (min-width: 992px) {
+    width: 30%;
+  }
+  @media only screen and (min-width: 1440px) {
+    width: 20%;
+  }
+
+  justify-content: space-between;
+  &_Sort:hover {
+    cursor: pointer;
+  }
+}
+
+.Active {
+  border-bottom: 0.25rem solid #000000;
+  transition: border 0.1s;
+}

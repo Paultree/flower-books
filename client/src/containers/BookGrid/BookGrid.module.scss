@@ -1,0 +1,30 @@
+.BookGrid {
+  &_Table {
+    @media only screen and (min-width: 320px) {
+      font-size: 0.75rem;
+    }
+    @media only screen and (min-width: 768px) {
+      font-size: 1rem;
+    }
+    @media only screen and (min-width: 992px) {
+      font-size: 1.5rem;
+    }
+    @media only screen and (min-width: 1440px) {
+      font-size: 2rem;
+    }
+    display: flex;
+    flex-direction: column;
+    &_Header {
+      margin: 0 1.25%;
+      display: flex;
+      border-bottom: 2px solid black;
+      & > th {
+        flex: 1 1 0;
+      }
+    }
+  }
+  &_Loader {
+    display: flex;
+    justify-content: center;
+  }
+}
