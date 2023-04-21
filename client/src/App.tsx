@@ -13,6 +13,7 @@ function App() {
 
   const toHome = (): void => {
     navigate('/flower-books');
+    (window.location.reload as (cache: boolean) => void)(false);
   };
 
   return (
