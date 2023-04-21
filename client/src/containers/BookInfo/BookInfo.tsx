@@ -37,12 +37,12 @@ const BookInfo = () => {
           <div className={styles.BookInfo_Info_Buttons}>
             <button disabled={!book.previewLink}>
               <a href={book.previewLink} target="_blank">
-                {book.previewLink ? 'Preview' : 'Unavailable'}
+                {book.previewLink ? 'Free Preview' : 'No Preview'}
               </a>
             </button>
             <button disabled={!book.storeLink}>
               <a href={book.storeLink} target="_blank">
-                {book.storeLink ? 'Buy' : 'Unavailable'}
+                {book.storeLink ? 'Buy' : 'Sold Out'}
               </a>
             </button>
           </div>

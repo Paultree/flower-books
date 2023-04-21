@@ -74,6 +74,8 @@ Steps:
   - Sort navbar has an underline depending on what list is getting sorted by.
     - Use of useState hook and joining of classes.
 - tests created for components + service.
+  - Mainly testing if component rendered information correctly.
+  - For bookInfo, had to import react-router-dom and import into test in order for it to be testable as it does not take in any props but only useParams.
 - For link buttons, user can click on preview or buy to redirect them to their respective pages. If preview link or buy links are unavailable on the API, it will be reflected on the button as it will be disabled.
 
 # Features
