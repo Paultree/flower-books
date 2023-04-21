@@ -5,10 +5,10 @@ A basic front-end application which demonstrates fetching and displaying data fr
 # Demo & Snippets
 
 v1
-![Alt Text](./project-demo.gif)
+![Alt Text](./project-demos/project-demo.gif)
 
 v2
-![Alt Text](./project-demo-update.gif)
+![Alt Text](./project-demos/project-demo-update.gif)
 
 # Link
 
