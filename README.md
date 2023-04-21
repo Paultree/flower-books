@@ -4,8 +4,7 @@ A basic front-end application which demonstrates fetching and displaying data fr
 
 # Demo & Snippets
 
-First draft
-
+First draft  
 ![Alt Text](./project-demos/project-demo.gif)
 
 Updated version  
