@@ -58,6 +58,10 @@ Steps:
 - npm run dev
 - Open google chrome browser and copy link in command line(local: link) into browser searchbar.
 
+for testing:
+
+- npm run test
+
 # Design Goals/Approach
 
 - For fetching all flower books, I have decided to use the react-query library. Although for the scope of this project we are fetching a specific API, I thought react-query would be best to use for its efficient fetching and error handling.
