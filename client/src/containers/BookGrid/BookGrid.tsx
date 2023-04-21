@@ -40,7 +40,7 @@ const BookGrid = ({ data, error, isLoading, isError }: BookGridProp) => {
               height="80"
               width="80"
               radius="9"
-              color="rgba(255, 255, 255, 0.87)"
+              color="black"
               ariaLabel="three-dots-loading"
               wrapperStyle={{}}
               visible={true}

@@ -102,6 +102,7 @@ for testing:
 # What did you struggle with?
 
 - finding a solution for sorting the data from react-query
+- testing BookInfo component and trying to mock useParams hook.
 
 # Licencing Details
 
