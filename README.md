@@ -81,6 +81,7 @@ for testing:
   - Mainly testing if component rendered information correctly.
   - For bookInfo, had to import react-router-dom and import into test in order for it to be testable as it does not take in any props but only useParams.
 - For link buttons, user can click on preview or buy to redirect them to their respective pages. If preview link or buy links are unavailable on the API, it will be reflected on the button as it will be disabled.
+- description from api uses html text. To overcome this, included a replace method in the service layer to filter out the html elements and return native text.
 
 # Features
 

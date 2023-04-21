@@ -18,7 +18,8 @@ export const getAllBooks = async (): Promise<Book[]> => {
       id: book?.id,
       title: book?.volumeInfo?.title || 'Title not available',
       authors: book?.volumeInfo?.authors?.join(' & ') || 'Authors not available',
-      description: book?.volumeInfo?.description || 'Description not available',
+      description:
+        book?.volumeInfo?.description?.replace(/<[^>]+>/g, '') || 'Description not available',
       image: book?.volumeInfo?.imageLinks?.thumbnail || missingImg,
       publishedDate: book?.volumeInfo?.publishedDate || 'Information missing',
       storeLink: book?.saleInfo?.buyLink || null,
@@ -43,7 +44,8 @@ export const getBook = async (id: string): Promise<Book> => {
       id: book?.id,
       title: book?.volumeInfo?.title || 'Title not available',
       authors: book?.volumeInfo?.authors?.join(' & ') || 'Authors not available',
-      description: book?.volumeInfo?.description || 'Description not available',
+      description:
+        book?.volumeInfo?.description?.replace(/<[^>]+>/g, '') || 'Description not available',
       image: book?.volumeInfo?.imageLinks?.thumbnail || missingImg,
       publishedDate: book?.volumeInfo?.publishedDate || 'Information missing',
       storeLink: book?.saleInfo?.buyLink || null,
